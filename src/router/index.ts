@@ -5,6 +5,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: '首页',
     component: () => import('@/pages/Main/index.vue'),
+  },
+  {
+    path: '/cesium',
+    name: '地图',
+    component: () => import('@/pages/Cesium/index.vue'),
   }
 ]
 

@@ -4,6 +4,7 @@
       class="chapter-title"
       v-for="item in chapterList"
       :key="item.name"
+      @click="handleClick"
     >
       {{ item.name }}
     </div>
@@ -11,6 +12,8 @@
 </template>
 
 <script setup lang="ts">
+import router from '@/router';
+
 const chapterList: Record<string, any>[] = [
   {
     name: '深入组件',
@@ -24,8 +27,15 @@ const chapterList: Record<string, any>[] = [
   },
   {
     name: '内置组件',
+  },
+  {
+    name: '地图'
   }
 ]
+
+const handleClick = () => {
+  router.push({ name: '地图', })
+}
 </script>
 
 <style lang="scss" scoped>
